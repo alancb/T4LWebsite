@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Educators and Learners in Programming with AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0e0e0, #b0b0b0);
+            color: black;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6c757d, #5a6268);
+            padding: 40px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 50px;
+        }
+        .hero p {
+            font-size: 28px;
+        }
+        .cta-button {
+            background: #444b52;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            font-size: 22px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background: #32383e;
+        }
+        .content {
+            padding: 80px 40px;
+            max-width: 1000px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.8;
+            text-align: left;
+        }
+        .accordion {
+            background: #444b52;
+            color: white;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 22px;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        .accordion:hover {
+            background: #32383e;
+        }
+        .panel {
+            display: none;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: left;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        .resources ul {
+            list-style: disc;
+            padding-left: 40px;
+        }
+        .resources li {
+            margin: 12px 0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordions = document.querySelectorAll(".accordion");
+            accordions.forEach(acc => {
+                const arrow = document.createElement("span");
+                arrow.textContent = "▼";
+                arrow.style.marginLeft = "10px";
+                acc.appendChild(arrow);
+                acc.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    const panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        arrow.textContent = "▼";
+                    } else {
+                        panel.style.display = "block";
+                        arrow.textContent = "▲";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <section id="home" class="hero">
+        <h1>Empowering Educators and Learners in Programming with AI</h1>
+        <p>Exploring the role of AI in enhancing programming education.</p>
+        <a href="#agenda" class="cta-button">View Topics</a>
+    </section>
+    
+    <section id="agenda" class="content">
+        <h2>Topics</h2>
+        <div class="agenda-item">
+            <button class="accordion">Introduction</button>
+            <div class="panel">
+                <p>Overview of AI's impact on programming education.</p>
+                <p><strong>Challenges:</strong> Resistance to AI tools, lack of AI literacy.</p>
+                <p><strong>Solutions:</strong> Training educators on AI usage, demonstrating AI's supportive role.</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <button class="accordion">Evolution of AI in Programming</button>
+            <div class="panel">
+                <p>Examining the development of AI from early automation to modern AI-assisted coding.</p>
+                <p><strong>Challenges:</strong> Adoption hesitancy, reliability of AI tools.</p>
+                <p><strong>Solutions:</strong> Demonstrating efficiency gains, enhancing AI model accuracy.</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <button class="accordion">AI as a Teaching Assistant</button>
+            <div class="panel">
+                <p>AI-powered tools aiding educators with lesson planning and assessments.</p>
+                <p><strong>Challenges:</strong> AI replacing traditional methods, over-reliance.</p>
+                <p><strong>Solutions:</strong> Using AI as a supplement rather than a replacement.</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <button class="accordion">AI as a Learning Assistant</button>
+            <div class="panel">
+                <p>Enhancing student learning through interactive AI-driven tutoring systems.</p>
+                <p><strong>Challenges:</strong> Ensuring students develop critical thinking skills.</p>
+                <p><strong>Solutions:</strong> Balancing AI assistance with hands-on problem-solving.</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <button class="accordion">Ethical and Privacy Considerations</button>
+            <div class="panel">
+                <p>Addressing data security, biases in AI, and responsible AI usage in education.</p>
+                <p><strong>Challenges:</strong> Privacy concerns, AI bias, ethical AI implementation.</p>
+                <p><strong>Solutions:</strong> Implementing transparent policies, educating users on AI ethics.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="resources" class="content resources">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://github.com/features/copilot">GitHub Copilot</a> - AI-powered coding assistance</li>
+            <li><a href="https://openai.com/chatgpt">ChatGPT</a> - AI for learning and tutoring</li>
+            <li><a href="#">Download Slides (Coming Soon)</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="content">
+        <h2>Contact Information</h2>
+        <p><strong>Alan Barth</strong></p>
+        <p>Email: <a href="mailto:abarth@mtec.edu">abarth@mtec.edu</a></p>
+    </section>
+    
+    <footer>
+        <p>This website was completely built by AI.</p>
+    </footer>
+</body>
+</html>
+
